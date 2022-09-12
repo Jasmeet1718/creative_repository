@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="page1" class="tabcontent" style="display: block">
+      <table class="t_page1">
+        <tr>
+          <td colspan="2" class="select_dims">Select dimension</td>
+        </tr>
+        <tr>
+          <td class="wh_dims">Width</td>
+          <td><input id="width_in" type="number" /></td>
+        </tr>
+        <tr>
+          <td class="wh_dims">Height</td>
+          <td><input id="height_in" type="number" /></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button
+              class="tablinks page1_button"
+              onclick="page(event, 'page2')"
+            >
+              Next
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <!------------------------------------------------------------- PAGE2 -------------------------------------------------------------------->
+    <div id="page2" class="tabcontent">
+      <div class="form-group">
+        <h2>Ad creation/data upload</h2>
+        <label for="usr" class="url_in">bg url:</label>
+        <input
+          type="url"
+          class="form-control"
+          id="0"
+          placeholder="add url here"
+        /><br />
+      </div>
+      <button class="ad_field" id="button" type="button">add field</button>
+      <button class="tablinks page2_button" onclick="page(event, 'page1')">
+        previous
+      </button>
+      <button id="ads_preview" class="page2_button" type="button">
+        Generate ads
+      </button>
+      <button class="tablinks page2_button" onclick="page(event, 'page3')">
+        next
+      </button>
+    </div>
+    <!-------------------------------------------------------------- PAGE3 --------------------------------------------------------------->
+    <div id="page3" class="tabcontent">
+      <div>
+        <h2 class="last">Animations</h2>
+        <h3 class="page3_heading">asset</h3>
+        <h3 class="page3_heading">select animations</h3>
+        <h3 class="page3_heading">delay</h3>
+        <h3 class="page3_heading">animation delay</h3>
+        <h3 class="page3_heading">animation repeat count</h3>
+        <div class="anima" id="animation">
+          <input
+            type="number"
+            id="repeat_delay"
+            placeholder="repeat delay"
+            class="rclass"
+          /><input
+            type="number"
+            id="repeat"
+            placeholder="no. of repeats"
+            class="rnumber"
+          />
+        </div>
+        <textarea
+          style="display: none"
+          rows="9"
+          cols="22"
+          id="function"
+          placeholder="Your function will come here"
+        ></textarea>
+        <button class="tablinks page3_button" onclick="page(event, 'page2')">
+          previous
+        </button>
+        <button id="preview" class="page3_button">preview</button>
+        <button class="b_copy page3_button" onclick="copy()">
+          <b>Copy</b>
+        </button>
+      </div>
+    </div>
+    <div id="images" class="img_outer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
