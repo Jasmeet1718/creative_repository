@@ -303,7 +303,7 @@ $("#preview").click(function () {
         { rotationY: 0, opacity: 1, ease: Power0.easeIn, delay: delay }
       );
     }
-    function tdoubleflipper() {
+    function doubleflipper_a() {
       var tll = new TimelineMax({
         repeat: repeatv,
         repeatDelay: 1.5 + rdelay - tdelay,
