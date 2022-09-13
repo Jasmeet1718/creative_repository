@@ -305,8 +305,8 @@ $("#preview").click(function () {
     }
     function doubleflipper_a() {
       var tll = new TimelineMax({
-        repeat: repeatv,
-        repeatDelay: 1.5 + rdelay - tdelay,
+        repeat: repeat,
+        repeatDelay: 1.5 + rdelay - delay,
       });
       tll.fromTo(
         "#a" + (k + 1),
