@@ -36,6 +36,7 @@ h3 {
 
 .img_outer {
   margin: 30px;
+  overflow: hidden;
 }
 
 .url_in {
